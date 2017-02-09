@@ -1,0 +1,19 @@
+BlogBundle\Entity\Seo:
+    type: entity
+    table: seo
+    repositoryClass: BlogBundle\Repository\SeoRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+            unique: true
+        description:
+            type: text
+            nullable: true
+    lifecycleCallbacks: {  }

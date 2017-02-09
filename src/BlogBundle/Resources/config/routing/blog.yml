@@ -1,0 +1,24 @@
+blog_blog_post:
+    path:     /post/{postId}
+    defaults: { _controller: "BlogBundle:Blog:post" }
+    methods:  GET
+
+blog_blog_author:
+    path:     /author/{authorId}
+    defaults: { _controller: "BlogBundle:Blog:author" }
+    methods:  GET
+
+blog_blog_authors:
+    path:     /authors
+    defaults: { _controller: "BlogBundle:Blog:authors" }
+    methods:  GET
+
+blog_blog_tags:
+    path:     /tags
+    defaults: { _controller: "BlogBundle:Blog:tags" }
+    methods:  GET
+
+blog_blog_tag:
+    path:     /tag/{tagId}
+    defaults: { _controller: "BlogBundle:Blog:tag" }
+    methods:  GET

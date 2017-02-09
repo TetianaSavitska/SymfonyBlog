@@ -1,0 +1,30 @@
+{% extends 'BlogBundle::base.html.twig' %}
+{% block item %}
+	{{ parent() }}
+	Home
+{% endblock %}
+
+{% block body %}
+	<article class="container">
+		{% for post in posts %}
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3>
+						<a href="{{ path('blog_blog_post', {'postId': post.id} )}}">
+							{{ post.title }}
+						</a>
+					</h3>
+					<p>
+						Posted by <a href="{{ path('blog_blog_author', {'authorId': post.author.id} )}}">{{ post.author.name }}</a>
+					</p>
+					<p>
+						{{ post.publishedAt | date('Y-m-d H:i:s') }}
+					</p>
+				</div>
+				<div class="panel-body">
+					<p>{{ post.content }}</p>
+				</div>
+			</div>
+		{% endfor %}
+	</article>
+{% endblock %}

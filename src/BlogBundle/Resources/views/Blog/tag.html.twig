@@ -1,0 +1,11 @@
+{% extends 'BlogBundle::layout.html.twig' %}
+
+{% block item %}
+	{{ parent() }}
+	Tags
+{% endblock %}
+
+{% block article %}
+	<h1>{{ tag.title }}</h1>
+	<hr>
+{% endblock %}

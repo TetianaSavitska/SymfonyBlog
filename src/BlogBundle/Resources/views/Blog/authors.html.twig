@@ -1,0 +1,17 @@
+{% extends 'BlogBundle::layout.html.twig' %}
+
+{% block item %}
+	{{ parent() }}
+	Authors
+{% endblock %}
+
+{% block article %}
+	{% for author in authors %}
+		<h2>
+			<a href="{{ path('blog_blog_author', {'authorId': author.id}) }}">
+				{{ author.name}}
+			</a>
+		</h2>
+		<p>{{ author.bio }}</p>
+	{% endfor %}
+{% endblock %}

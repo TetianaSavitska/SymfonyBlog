@@ -1,0 +1,18 @@
+{% extends 'BlogBundle::layout.html.twig' %}
+
+{% block item %}
+	{{ parent() }}
+	Tagss
+{% endblock %}
+
+{% block article %}
+	<ol>
+		{% for tag in tags %}
+			<li>
+				<a href="{{ path('blog_blog_tag', {'tagId': tag.id}) }}">
+					{{ tag.title}}
+				</a>
+			</li>
+		{% endfor %}
+	</ol>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'BlogBundle::base.html.twig' %}
+
+{% block body %}
+	<main class="container">
+		<div class="row">
+			<article class="col-md-9 col-sm-9">
+				{% block article %}
+				{% endblock %}
+			</article>
+			<aside class="col-md-3 col-sm-3">
+				{{  render(controller('BlogBundle:Blog:sidebar')) }}
+			</aside>
+		</div>
+	</main>
+{% endblock %}

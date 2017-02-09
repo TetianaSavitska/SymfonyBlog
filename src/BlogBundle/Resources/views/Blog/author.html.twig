@@ -1,0 +1,14 @@
+{% extends 'BlogBundle::layout.html.twig' %}
+
+{% block item %}
+	{{ parent() }}
+	Authors
+{% endblock %}
+
+{% block article %}
+	<h1>{{ author.name }}</h1>
+	<hr>
+	<div class="panel-body">
+		<p>{{ author.bio }}</p>
+	</div>
+{% endblock %}

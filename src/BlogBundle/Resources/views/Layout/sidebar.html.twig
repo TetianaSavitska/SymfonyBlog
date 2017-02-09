@@ -1,0 +1,17 @@
+<div class="well">
+	<h3>Authors</h3>
+	<ul>
+		{% for author in authors %}
+			<li><a href="{{ path('blog_blog_author', {'authorId': author.id}) }}">{{ author.name }}</a></li>
+		{% endfor %}
+	</ul>
+</div>
+
+<div class="well">
+	<h3>Tags</h3>
+	<ul>
+		{% for tag in tags %}
+			<li><a href="{{ path('blog_blog_tag', {'tagId': tag.id}) }}">{{ tag.title }}</a></li>
+		{% endfor %}
+	</ul>
+</div>

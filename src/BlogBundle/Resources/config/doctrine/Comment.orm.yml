@@ -1,0 +1,29 @@
+BlogBundle\Entity\Comment:
+    type: entity
+    table: comment
+    repositoryClass: BlogBundle\Repository\CommentRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+#        post:
+#            type: object
+#            nullable: true
+        pseudo:
+            type: string
+            length: '32'
+        message:
+            type: text
+            nullable: true
+        date:
+            type: datetime
+    manyToOne:
+        post:
+            targetEntity: BlogBundle\Entity\Post 
+            joinColumn: 
+                name: post_id
+                referencedColumnName: id
+    lifecycleCallbacks: {  }

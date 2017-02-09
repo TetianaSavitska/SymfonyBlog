@@ -1,0 +1,23 @@
+blog_post:
+    resource: "@BlogBundle/Resources/config/routing/post.yml"
+    prefix:   /post
+
+blog_author:
+    resource: "@BlogBundle/Resources/config/routing/author.yml"
+    prefix:   /author
+
+blog_tag:
+    resource: "@BlogBundle/Resources/config/routing/tag.yml"
+    prefix:   /tag
+
+blog_comment:
+    resource: "@BlogBundle/Resources/config/routing/comment.yml"
+    prefix:   /comment
+
+blog_blog:
+    resource: "@BlogBundle/Resources/config/routing/blog.yml"
+    prefix:   /blog
+
+blog_homepage:
+    path:     /
+    defaults: { _controller: BlogBundle:Blog:index }
